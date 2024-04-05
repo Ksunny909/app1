@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
+{% load carts_tags %}
 {% block content %}
 <div class="row">
+	{% user_carts request as carts%}
 	<div class="container mt-5">
 			<div class="row justify-content-center">
 					<div class=" bg-white p-4 mb-4 mx-2 rounded custom-shadow">
