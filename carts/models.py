@@ -31,7 +31,7 @@ class Cart(models.Model):
     created_timestamp = models.DateTimeField(
         auto_now_add=True, verbose_name="Дата добавления"
     )
-    
+
     class Meta:
         db_table = "cart"
         verbose_name = "Корзина"
@@ -44,7 +44,7 @@ class Cart(models.Model):
 
 
     def __str__(self):
-        # if self.user:
+        if self.user:
             return f'Корзина {self.user.username} | Товар {self.product.name} | Количество {self.quantity}'
             
-        # return f'Анонимная корзина | Товар {self.product.name} | Количество {self.quantity}'
+        return f'Анонимная корзина | Товар {self.product.name} | Количество {self.quantity}'
